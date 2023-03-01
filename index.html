@@ -36,10 +36,13 @@
   <script>
 
     function triggerVibrate() {
-      navigator.vibrate(200);
+      window.focus();
+      if (navigator.vibrate) {
+        window.navigator.vibrate(200);
+      }
     }
 
-    var serviceWorkerVersion = '2364832776';
+    var serviceWorkerVersion = '3859883747';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
